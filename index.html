@@ -1,0 +1,67 @@
+
+You sent
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Jomalyn ❤️</title>
+<link rel="stylesheet"href="st.css">
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Happy Birthday, Love!</h1>
+
+    <p class="subtitle">
+        A special surprise made with love for Jomalyn ❤️
+        <br>Choose one to get started!
+    </p>
+
+    <div class="objects">
+
+        <!-- FLOWERS -->
+        <button class="object" onclick="openFlowers()">
+            <div class="picture">💐</div>
+            <p>🌷 Flowers for you</p>
+        </button>
+
+        <!-- CAKE -->
+        <button class="object" onclick="openCake()">
+            <div class="picture">🎂</div>
+            <p>🎂 Birthday cake</p>
+        </button>
+
+        <!-- LOVE LETTER -->
+        <button class="object" onclick="openLetter()">
+            <div class="picture">💌</div>
+            <p>💗 Letter just for you</p>
+        </button>
+
+    </div>
+
+    <p class="hint">
+        Made with all my love, just for you. ❤️
+    </p>
+
+    <footer>
+        Forever yours, with love ❤️
+    </footer>
+
+</div>
+
+<!-- POPUP -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal()">×</button>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

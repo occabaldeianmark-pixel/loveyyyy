@@ -1,0 +1,192 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    color: white;
+    text-align: center;
+    background:
+      linear-gradient(rgba(60,0,35,.48),rgba(60,0,35,.68)),
+      radial-gradient(circle at 20% 20%, #f58ab5, transparent 40%),
+      linear-gradient(135deg,#7d164d,#c32b78,#48102e);
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 65px 18px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: normal;
+    font-style: italic;
+    text-shadow: 0 3px 15px #5d123b;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 55px;
+}
+
+.objects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    max-width: 850px;
+}
+
+.object {
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: .35s;
+    width: 190px;
+}
+
+.object:hover {
+    transform: translateY(-12px) scale(1.07);
+}
+
+.object .picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 165px;
+    font-size: 95px;
+    filter: drop-shadow(0 8px 12px #260017);
+}
+
+.object p {
+    font-size: 1.15rem;
+    margin-top: 10px;
+}
+
+.hint {
+    margin-top: 55px;
+    font-size: .9rem;
+    opacity: .85;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20,0,15,.85);
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff0f6;
+    color: #761b49;
+    border-radius: 22px;
+    padding: 30px 22px;
+    max-width: 550px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 35px #f48ab9;
+    animation: appear .4s ease;
+}
+
+@keyframes appear {
+    from {transform: scale(.7); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.close {
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    color: #a62a65;
+    cursor: pointer;
+}
+
+.modal h2 {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.modal p {
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 13px;
+    background: #f7c1d6;
+}
+
+.primary {
+    background: #c13d78;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.primary:hover {
+    background: #922353;
+}
+
+.cake {
+    font-size: 100px;
+    margin: 15px;
+}
+
+.heart {
+    color: #d83f7e;
+    font-size: 25px;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: .85rem;
+    opacity: .8;
+}
+
+@media(max-width: 500px) {
+    .objects { gap: 20px; }
+    .object { width: 135px; }
+    .object .picture { height: 125px; font-size: 75px; }
+    .object p { font-size: 1rem; }
+}
